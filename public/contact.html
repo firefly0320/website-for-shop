@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="pooja choudhary">
+    <meta name="contact details" content="a website for the dessert shop">
+    <title>sweet as u SHOP</title>
+    <link rel="stylesheet" href="./stylesheet/style.css">
+</head>
+
+
+<body>
+    <header>
+        <h1>contact us</h1>
+        <nav class=header__nav>
+            <ul  class=header__ul>
+                <li> <a href="/">home</a></li>
+                <li> <a href="/#about">About <abbr title="The Little Shop">LTS</abbr> </a></li>
+                
+                <li>   <a href="/#ourmenu">Our Menu</a></li>
+                
+                <li><a href="hours.html">open hours</a></li>      
+            </ul>
+        </nav>
+        <figure>
+             <img src="imagesstore/contact.jpg" alt="Cookie image" title="we love Cookies" height="400px">
+       <figcaption class=figcaptions>
+      fill free to share your reviews with us
+       </figcaption>
+    </figure>
+            
+        <hr>
+    </header>
+    <hr>
+    <main>
+        <section>
+     <h2>our contact form </h2>
+     <form onsubmit="sendEmail();reset();return false;">
+        <fieldset>
+            <legend>
+                send us a message
+            </legend>
+                <p>
+                    <label for="name">name</label>
+                    <input type="text" name="name" placeholder="your name" id="name" 
+                     required  >       
+                    <br>
+                  </p>
+                  <p>
+                     <label for="email">email</label>
+                     <input type="email" name="email" placeholder="your email" id="email" 
+                      required  >
+                    </p>
+                    <p>
+                        <label for="message">your message</label>
+                        <br>
+                        <textarea type="message" name="message " placeholder ="type your message here" id="message"
+                        row="10" cols="20"></textarea>
+                    </p>
+          
+        </fieldset>
+        <button type="submit">submit</button>
+      
+     </form>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "poojachoudhary0520@gmail.com",
+    Password : "pooja0520",
+    To : 'poojachoudhary0520@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "feedback form",
+    Body : document.getElementById("message").value,
+}).then(
+  message => alert("Message sent successfully")
+);}
+     </script>
+    </section>
+    <section>
+        <h2>our location</h2>
+        <address>
+            parvat patia surat
+            <br>
+            mobile: <no:9106348281>9106348281</no:9106348281>
+            <br>
+           phone :  <a href="tel:+9199999999">9999999999</a>
+        </address>
+    </section>
+    </main>
+       
+    <footer>
+        <p> copyright &copy;  sweet as u</p>
+    </footer>
+    </body>
+    </html>
+
+       
+         
