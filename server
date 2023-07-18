@@ -9,8 +9,8 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '/public')));
 
-app.get('^/$|/about(.html)?',(req,res)=>{
-    res.sendFile(path.join(__dirname,'public','about.html'));
+app.get('^/$|/index(.html)?',(req,res)=>{
+    res.sendFile(path.join(__dirname,'public','index.html'));
 })
 app.get('/contact(.html)?',(req,res)=>{
     res.sendFile(path.join(__dirname,'public','/contact.html'));
